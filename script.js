@@ -54,6 +54,10 @@ function addTask() {
     const taskText = taskInput.value.trim();
     const selectedDate = userDate.value;
 
+    if (!selectedDate) {
+        alert('Select a date.');
+        return;
+    }
     if (taskText === '') {
         alert('Please enter a task.');
         return;
